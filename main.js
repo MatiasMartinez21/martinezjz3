@@ -69,7 +69,7 @@ if(localStorage.getItem("carrito")){
 
 const contenedorProductos = document.getElementById("contenedorProductos");
 
- 
+ //card productos
 
 const mostrarProductos = () => {
     productos.forEach( producto => {
@@ -86,6 +86,9 @@ const mostrarProductos = () => {
                 </div>`
         contenedorProductos.appendChild(card);
 
+
+
+        
        
         const boton = document.getElementById(`boton${producto.id}`);
         boton.addEventListener("click", () => {
@@ -214,3 +217,16 @@ if(modo === "dark") {
 } else {
     document.body.classList.remove("dark");
 }
+
+
+
+const boton=document.getElementById("boton");
+
+boton.addEventListener("click",()=>{
+  swal.fire({
+    title: "Gracias por tu registro",
+    background: "black",
+    icon:"success"
+    
+    })
+})
